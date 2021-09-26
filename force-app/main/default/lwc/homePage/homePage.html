@@ -1,0 +1,25 @@
+<template>
+    <div class="container slds-grid slds-grid_align-center slds-gutters_x-small slds-wrap">
+        <c-home-page-tile 
+            class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 slds-m-bottom_x-small"
+            tile-label="New Patient"
+            default-variant="New"
+            shadowed-variant="NewShadowed"
+            onclick={handleSelect}>
+        </c-home-page-tile>
+        <c-home-page-tile 
+            class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 slds-m-bottom_x-small"
+            tile-label="Patients"
+            default-variant="Patients"
+            shadowed-variant="PatientsShadowed"
+            onclick={handleSelect}>
+        </c-home-page-tile>
+        <c-home-page-tile 
+            class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 slds-m-bottom_x-small"
+            tile-label="Rooms"
+            default-variant="Rooms"
+            shadowed-variant="RoomsShadowed"
+            onclick={handleSelect}>
+        </c-home-page-tile>
+    </div>
+</template>

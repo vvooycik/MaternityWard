@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+        <header slot="title">
+            {newPatientTitle}
+        </header>
+        <lightning-input
+            type="checkbox"
+            label="Assign Patient to the room"
+            name="createHospitalisation"
+            onchange={handleCheckboxChange}
+            class="slds-m-around_x-large">
+        </lightning-input>
+        <lightning-record-form
+            object-api-name="Patient__c"
+            fields={fields}
+            onsuccess={handleSuccess}>
+        </lightning-record-form>
+    </lightning-card>
+</template>

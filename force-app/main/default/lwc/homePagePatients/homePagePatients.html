@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+        <template if:true={patients}>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_full">
+                    <lightning-input 
+                        type="text" 
+                        placeholder="Search" 
+                        name="search"
+                        class="slds-m-left_xx-large slds-m-right_xx-large slds-m-bottom_x-large"
+                        onchange={handleChange}>
+                    </lightning-input>
+                </div>
+                <template for:each={filteredPatients} for:item="patient">
+                    <div key={patient.PESEL__c} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-var-p-around_x-small">
+                        <c-home-page-patient-tile
+                            name={patient.Full_Name__c}
+                            pesel={patient.PESEL__c}
+                            dob={patient.Date_of_birth__c}
+                            phone={patient.Phone__c}
+                            id={patient.Id}
+                            onclick={handleClick}>
+                        </c-home-page-patient-tile>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,43 @@
+<template>
+    <lightning-card>
+        <template if:true={rooms}>
+            <div class="slds-grid slds-m-bottom_small slds-wrap">
+                <div class="slds-col slds-grid slds-grid_align-center slds-size_full slds-m-bottom_small">
+                    <lightning-input 
+                        type="checkbox"
+                        label="Single"
+                        name="single"
+                        checked
+                        onchange={handleSingleChange}
+                        class="slds-col">
+                    </lightning-input>
+                    <lightning-input 
+                        type="checkbox"
+                        label="Multibed"
+                        name="multibed"
+                        checked
+                        onchange={handleMultiChange}
+                        class="slds-col">
+                    </lightning-input>
+                    <lightning-input 
+                        type="checkbox"
+                        label="Taken"
+                        name="taken"
+                        disabled
+                        class="slds-col">
+                    </lightning-input>
+                </div>
+                <template for:each={filteredRooms} for:item="room">
+                    <div key={room.Id} class="slds-col slds-size_1-of-3 slds-medium-size_1-of-4 slds-var-p-around_x-small">
+                        <c-home-page-room-tile
+                            room-number={room.Name}
+                            free-beds={room.Free_Beds__c}
+                            type-room={room.Type__c}
+                            onclick={handleClick}>
+                        </c-home-page-room-tile>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+</template>

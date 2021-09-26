@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>describes the tile that has been selected by the user</description>
+        <fieldName>tile</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Defines wether new hospitalisation should be created</description>
+        <fieldName>createHospitalisation</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Room chosen to which patient will be assigned</description>
+        <fieldName>selectedRoomName</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Patient id</description>
+        <fieldName>patientId</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Is hospitalisation created</description>
+        <fieldName>hospitalisationCreated</fieldName>
+    </lightningMessageFields>
+    <masterLabel>EventChannel</masterLabel>
+</LightningMessageChannel>

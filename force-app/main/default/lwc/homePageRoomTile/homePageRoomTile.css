@@ -1,0 +1,33 @@
+div {
+    width: 100%;
+    border: solid 5px #d8bdc7;
+    border-radius: 0.5rem;
+    background:#d8bdc7;
+    cursor: pointer;
+}
+
+.free{
+    background-color: #BE92A2;
+}
+
+.taken{
+    background-color: #d8bdc7;
+}
+
+.beds{
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    color:#bf8198;
+}
+.name{
+    text-align: center;
+    font-weight: bold;
+    font-size: medium;
+    color:#bf8198;
+}
+.bedsText{
+    text-align: center;
+    font-size: small;
+    color:gray;
+}

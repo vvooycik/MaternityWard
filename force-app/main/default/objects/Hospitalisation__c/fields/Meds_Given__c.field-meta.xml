@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meds_Given__c</fullName>
+    <description>Field in which user can provide list of medications given to the patient during hospitalisation</description>
+    <externalId>false</externalId>
+    <label>Meds Given</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,85 @@
+div {
+    width: 100%;
+    height: 10rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+
+h5{
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    width: 100%;
+    font-size: xx-large;
+}
+
+.Patients{
+    background-color: #96CDFF;
+}
+.PatientsShadowed{
+    background-color: #c0e1ff;
+}
+.PatientsShadowed:hover{
+    background-color: #96CDFF;
+}
+.PatientsShadowed h5{
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    width: 100%;
+    font-size: x-large;
+}
+.PatientsShadowed:hover h5{
+    font-size: xx-large;
+    transition: font-size .1s;
+}
+.New{
+    background-color: #DBBADD;
+}
+.NewShadowed{
+    background-color: #e9d5ea;
+}
+.NewShadowed:hover{
+    background-color: #DBBADD;
+}
+.NewShadowed h5{
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    width: 100%;
+    font-size: x-large;
+}
+.NewShadowed:hover h5{
+    font-size: xx-large;
+    transition: font-size .1s;
+}
+
+.Rooms{
+    background-color: #BE92A2;
+}
+.RoomsShadowed{
+    background-color: #d8bdc7;
+}
+.RoomsShadowed:hover{
+    background-color: #BE92A2;
+}
+.RoomsShadowed h5{
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    width: 100%;
+    font-size: x-large;
+}
+.RoomsShadowed:hover h5{
+    font-size: xx-large;
+}
+
+@media only screen and (max-width: 768px) {
+    div {
+        height: 3.5rem
+    }
+
+  }

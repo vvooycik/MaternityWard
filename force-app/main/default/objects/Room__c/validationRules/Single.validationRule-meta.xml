@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Single</fullName>
+    <active>true</active>
+    <description>Single room has to have only one bed</description>
+    <errorConditionFormula>(ISPICKVAL(Type__c, &quot;Single room&quot;) &amp;&amp; Beds_Amount__c != 1) || (ISPICKVAL(Type__c, &quot;Multibed room&quot;) &amp;&amp; Beds_Amount__c != 5)</errorConditionFormula>
+    <errorDisplayField>Beds_Amount__c</errorDisplayField>
+    <errorMessage>Single room has to have only 1 bed and Multibed room has to have exactly 5 beds</errorMessage>
+</ValidationRule>

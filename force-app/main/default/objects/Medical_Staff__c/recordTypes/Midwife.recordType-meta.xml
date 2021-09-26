@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Midwife</fullName>
+    <active>false</active>
+    <label>Midwife</label>
+    <picklistValues>
+        <picklist>Scientific__c</picklist>
+        <values>
+            <fullName>MD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Midwife</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proffessor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

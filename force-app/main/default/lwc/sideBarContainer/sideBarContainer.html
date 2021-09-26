@@ -1,0 +1,45 @@
+<template>
+    <template if:true={showNewPatientSideBar}>
+        <template if:true={showHospitalisation}>
+            <lightning-card>
+                <c-side-bar-rooms selected-tile={selectedTile} onselectedroom={handleRoomChange}></c-side-bar-rooms>
+            </lightning-card>
+            <lightning-card>
+                <lightning-record-edit-form 
+                    object-api-name="Hospitalisation__c"
+                    onsuccess={handleHospitalisationSuccess}>
+                    <lightning-input-field field-name="Patient__c" value={patientId}></lightning-input-field>
+                    <lightning-input-field field-name="Room__c" value={roomId}></lightning-input-field>
+                    <lightning-input-field field-name="Start_Date__c" value={today}></lightning-input-field>
+                    <lightning-input-field field-name="Diet__c"></lightning-input-field>
+                    <lightning-input-field field-name="Meds_Given__c"></lightning-input-field>
+                    <lightning-input-field field-name="Comments__c"></lightning-input-field>
+                    <lightning-button
+                        class="slds-m-top_small slds-align_absolute-center"
+                        type="submit"
+                        label="Assign">
+                    </lightning-button>
+                </lightning-record-edit-form>
+            </lightning-card>
+        </template>
+        <template if:true={showPregnancy}>
+            <lightning-card>
+                <lightning-record-edit-form 
+                    object-api-name="Pregnancy__c"
+                    onsuccess={handlePregnancySuccess}>
+                    <lightning-input-field field-name="Name" value={pregnancyName}></lightning-input-field>
+                    <lightning-input-field field-name="Estimated_Start_Date__c" value={estStart}></lightning-input-field>
+                    <lightning-input-field field-name="Estimated_End_Date__c" value={estEnd}></lightning-input-field>
+                    <lightning-input-field field-name="Pregnancy_Multiplicity__c" value={multiplicity}></lightning-input-field>
+                    <lightning-input-field field-name="Risk_Factors__c" value={risk}></lightning-input-field>
+                    <lightning-input-field field-name="Patient__c" value={patientId}></lightning-input-field>
+                    <lightning-button
+                        class="slds-m-top_small slds-align_absolute-center"
+                        type="submit"
+                        label="Assign">
+                    </lightning-button>
+                </lightning-record-edit-form>
+            </lightning-card>
+        </template>
+    </template>
+</template>
